@@ -1,13 +1,21 @@
 # Getting Started
 
-1. Clone this repo && `cd` into it
-1. Run `cp .env.example .env`
-1. Run `docker-compose up -d`
+Warning, there's a large SQL file of ~46MB to download as part of this repository. 
+
+1. Clone this repo && `cd` into it.
+1. Run `cp .env.example .env`.
+1. Unzip `database/imports/db-admin-assignment.sql.zip`, leaving the SQL file in that directory. 
+1. Run `mv database/imports/db-admin-assignment.sql.zip ..` to move the zip file out of the folder. 
+1. Run `docker-compose up -d`.
+
+The SQL file should automatically import into the database if the steps above were followed correctly. 
+
+If not, please connect to the database using the credentials below and import the SQL file manually. 
 
 # Verify the Installation
 
 After completing the **Getting Started** section, the following should work for you: 
-1. Visit [http://localhost:9081](http://localhost:9081) to see the welcome page.
+1. Visit [http://localhost:8091](http://localhost:8091) to see the welcome page.
 1. Connect to the mysql DB using these credentials: 
     1. host:        127.0.0.1
     1. port:        3311
@@ -21,6 +29,8 @@ After completing the **Getting Started** section, the following should work for 
 
 If you made it this far, then you're good to start the live coding portion of the test.  
 
+Please contact us using the same methods of communication used thus far. 
+
 # Familiarize Yourself with the Database Tables
 
 Take some time to read through the schema for each table. Think about whether there are any improvements you would make to them. 
@@ -29,7 +39,7 @@ Take some time to read through the schema for each table. Think about whether th
 
 Changes made to the database in a Laravel application require a database migration to be written. 
 
-Read about [migrations here](https://laravel.com/docs/5.5/migrations) and practice implementing one or two migrations. You'll be asked to do this during the live-coding.
+Read about [migrations here](https://laravel.com/docs/5.5/migrations) and practice implementing one or two migrations. You may be asked to do this during the live-coding.
 
 # Interacting with the Docker Container
 
